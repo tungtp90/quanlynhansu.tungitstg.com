@@ -1,0 +1,1217 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <qlns Ref="2" type="Stimulsoft.Report.Dictionary.StiMySqlDatabase" isKey="true">
+        <Alias>qlns</Alias>
+        <ConnectionStringEncrypted>49xla81LWoXDX5yEY3ThP4t40UjfBUNZaVz99Gs9sXPCVs+hyVlLme0T2b1PAOsL2Hr77UgDwx3hSg==</ConnectionStringEncrypted>
+        <Name>qlns</Name>
+      </qlns>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <hop_dong Ref="3" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>hop_dong</Alias>
+        <Columns isList="true" count="70">
+          <value>ma_nv,System.String</value>
+          <value>ten_nv,System.String</value>
+          <value>ngay_sinh,System.DateTime</value>
+          <value>gioi_tinh,System.String</value>
+          <value>ten_dan_toc,System.String</value>
+          <value>so_cchn,System.String</value>
+          <value>ngay_cap_cchn,System.DateTime</value>
+          <value>noi_cap_cchn,System.String</value>
+          <value>trang_thai_lv,System.String</value>
+          <value>pham_vi_hoat_dong_cm,System.String</value>
+          <value>chung_chi_khac,System.String</value>
+          <value>toantg_bantg,System.String</value>
+          <value>ten_trinh_do,System.String</value>
+          <value>ten_chuyen_mon,System.String</value>
+          <value>ten_chuc_vu,System.String</value>
+          <value>ngay_bat_dau_lam_viec,System.DateTime</value>
+          <value>ngay_thu_viec,System.DateTime</value>
+          <value>ngay_tham_gia_bhxh,System.DateTime</value>
+          <value>nhiem_vu,System.String</value>
+          <value>luong_co_ban,System.Single</value>
+          <value>thoi_han_nang_luong,System.DateTime</value>
+          <value>huong_che_do_bhxh,System.String</value>
+          <value>hoc_tap,System.String</value>
+          <value>ky_luat,System.String</value>
+          <value>loai_hop_dong,System.String</value>
+          <value>thoi_gian_nghi_viec,System.DateTime</value>
+          <value>ly_do_nghi_viec,System.String</value>
+          <value>ten_phong_ban,System.String</value>
+          <value>ten_don_vi,System.String</value>
+          <value>ten_bang_cap,System.String</value>
+          <value>ten_loai_nv,System.String</value>
+          <value>ten_quoc_tich,System.String</value>
+          <value>ten_ton_giao,System.String</value>
+          <value>so_cmnd,System.String</value>
+          <value>ngay_cap_cmnd,System.DateTime</value>
+          <value>noi_cap_cmnd,System.String</value>
+          <value>dia_chi,System.String</value>
+          <value>ho_khau,System.String</value>
+          <value>so_dien_thoai,System.String</value>
+          <value>ghi_chu_nv,System.String</value>
+          <value>hd_id,System.Int32</value>
+          <value>ma_hd,System.String</value>
+          <value>nhan_vien_id,System.Int32</value>
+          <value>ngay_soan_hd,System.DateTime</value>
+          <value>ngay_ky_hd,System.DateTime</value>
+          <value>ngay_hieu_luc_hd,System.DateTime</value>
+          <value>dia_diem_ky_hd,System.String</value>
+          <value>noi_dung_hd,System.String</value>
+          <value>ghi_chu_hd,System.String</value>
+          <value>dia_diem_lv,System.String</value>
+          <value>phuong_tien,System.String</value>
+          <value>tg_ngay,System.String</value>
+          <value>tg_tuan,System.String</value>
+          <value>tg_nghi_ngoi,System.String</value>
+          <value>luong_can_ban,System.String</value>
+          <value>pc_cong_viec,System.String</value>
+          <value>pc_doc_hai,System.String</value>
+          <value>pc_an_trua,System.String</value>
+          <value>pc_dien_thoai,System.String</value>
+          <value>pc_xang_xe,System.String</value>
+          <value>chi_phi_di_lai,System.String</value>
+          <value>le_tet,System.String</value>
+          <value>hinh_thuc_tra_luong,System.String</value>
+          <value>thoi_gian_tra_luong,System.String</value>
+          <value>che_do_nang_luong,System.String</value>
+          <value>bhyt_bhxh,System.String</value>
+          <value>nguoi_tao,System.String</value>
+          <value>ngay_tao,System.DateTime</value>
+          <value>nguoi_sua,System.String</value>
+          <value>ngay_sua,System.DateTime</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>de1cec14a48840a98b10534221748577</Key>
+        <Name>hop_dong</Name>
+        <NameInSource>qlns</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>SELECT  nv.ma_nv, nv.ten_nv, nv.ngay_sinh, (CASE nv.gioi_tinh
+    WHEN 1 THEN 'Nam' ELSE 'Nữ'
+  END) AS gioi_tinh, dt.ten_dan_toc, nv.so_cchn, DATE(nv.ngay_cap_cchn) AS ngay_cap_cchn,
+  nv.noi_cap_cchn, (CASE nv.trang_thai_lv WHEN 1 THEN 'Đang làm việc'
+    ELSE 'Đã nghỉ việc'
+  END) AS trang_thai_lv, nv.pham_vi_hoat_dong_cm, nv.chung_chi_khac,
+  nv.toantg_bantg, td.ten_trinh_do, cm.ten_chuyen_mon, cv.ten_chuc_vu,
+  nv.ngay_bat_dau_lam_viec, nv.ngay_thu_viec, nv.ngay_tham_gia_bhxh,
+  nv.nhiem_vu, nv.luong_co_ban, nv.thoi_han_nang_luong, nv.huong_che_do_bhxh,
+  nv.hoc_tap, nv.ky_luat, (CASE khd.loai_hop_dong
+    WHEN 1 THEN 'Hợp đồng không xác định thời hạn'
+    WHEN 2 THEN 'Hợp đồng có xác định thời hạn' WHEN 3 THEN 'Hợp đồng thử việc'
+  END) AS loai_hop_dong, nv.thoi_gian_nghi_viec, nv.ly_do_nghi_viec,
+  pb.ten_phong_ban, dv.ten_don_vi, bc.ten_bang_cap, lnv.ten_loai_nv,
+  qt.ten_quoc_tich, tg.ten_ton_giao, nv.so_cmnd, nv.ngay_cap_cmnd,
+  nv.noi_cap_cmnd, nv.dia_chi,nv.ho_khau, nv.so_dien_thoai, nv.ghi_chu_nv,khd.id AS hd_id, khd.ma_hd,
+  khd.nhan_vien_id, DATE(khd.ngay_soan_hd) AS ngay_soan_hd, DATE(khd.ngay_ky_hd) AS ngay_ky_hd,
+  DATE(khd.ngay_hieu_luc_hd) AS ngay_hieu_luc_hd, khd.dia_diem_ky_hd, khd.noi_dung_hd, khd.ghi_chu_hd, khd.dia_diem_lv, khd.phuong_tien, khd.tg_ngay, khd.tg_tuan, khd.tg_nghi_ngoi,
+  khd.luong_can_ban, khd.pc_cong_viec, khd.pc_doc_hai, khd.pc_an_trua,
+  khd.pc_dien_thoai, khd.pc_xang_xe, khd.chi_phi_di_lai, khd.le_tet,
+  khd.hinh_thuc_tra_luong, khd.thoi_gian_tra_luong, khd.che_do_nang_luong,
+  khd.bhyt_bhxh, khd.nguoi_tao, khd.ngay_tao, khd.nguoi_sua, khd.ngay_sua
+FROM nhanvien nv, quoc_tich qt, dan_toc dt, ton_giao tg, loai_nv lnv,
+    trinh_do td, chuyen_mon cm, bang_cap bc, phong_ban pb, chuc_vu cv,
+    tinh_trang_hon_nhan hn, don_vi dv, ky_hop_dong khd
+WHERE nv.id = khd.nhan_vien_id AND nv.quoc_tich_id = qt.id AND
+  nv.dan_toc_id = dt.id AND nv.ton_giao_id = tg.id AND nv.loai_nv_id = lnv.id
+  AND nv.trinh_do_id = td.id AND nv.chuyen_mon_id = cm.id AND
+  nv.bang_cap_id = bc.id AND nv.phong_ban_id = pb.id AND nv.chuc_vu_id = cv.id
+  AND nv.hon_nhan_id = hn.id AND nv.don_vi_id = dv.id</SqlCommand>
+      </hop_dong>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="1">
+      <value>,id,id,,System.Int32,,False,False,False,False,,,True</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>0cc3f15e900b4bfcbd6792070480e6a1</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="3">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <DataBand1 Ref="5" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,4,190,272</ClientRectangle>
+          <Components isList="true" count="34">
+            <Text1 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0,85.3,12.7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,13,Bold</Font>
+              <Guid>fe9da0a756b4473d8c7dc8dffa9e8856</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>CTY TNHH BỆNH VIỆN HOÀNG TUẤN
+BỆNH VIỆN ĐA KHOA HOÀNG TUẤN</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>91.5,0,96,12.7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,13,Bold</Font>
+              <Guid>952cd5cc6666406fbf377cd86187acb4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+    Độc lập - Tự do - Hạnh Phúc</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Shape1 Ref="8" type="Shape" isKey="true">
+              <BorderColor>Black</BorderColor>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>22.4,10,33,2.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>5d059ec96179448f9db4f529866c58d7</Guid>
+              <Name>Shape1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <ShapeType Ref="9" type="Stimulsoft.Report.Components.ShapeTypes.StiHorizontalLineShapeType" isKey="true" />
+            </Shape1>
+            <Shape2 Ref="10" type="Shape" isKey="true">
+              <BorderColor>Black</BorderColor>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>126.5,10,40.6,2.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>7b752e72a13447e6ad03e24d3f66f6f4</Guid>
+              <Name>Shape2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <ShapeType Ref="11" type="Stimulsoft.Report.Components.ShapeTypes.StiHorizontalLineShapeType" isKey="true" />
+            </Shape2>
+            <Text3 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.7,16,48.2,5.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,13,Bold</Font>
+              <Guid>61eb8071993f47148885a99bff3ec7d5</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>SỐ: {hop_dong.ma_hd}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text5 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>60,24,71.1,7.7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,18,Bold</Font>
+              <Guid>3f9056305f684a0da48d9c17dcd1601e</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>HỢP ĐỒNG LAO ĐỘNG</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text4 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,36,182,40</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Chúng tôi, một bên là: Công ty TNHH Bệnh Viện Hoàng Tuấn
+Địa chỉ: 80A, Lê Hồng Phong, Khóm 7, Phường 3, Tp. Sóc Trăng, tỉnh Sóc Trăng
+Người đại diện: Nguyễn Hoàng Tuấn                   
+Sinh ngày: 01 tháng 01 năm 1966
+Số CMTND: 094066001138	Cấp ngày: 24/04/2021	Nơi cấp: Cục CSQL&amp;TTXH
+Địa chỉ nơi cư trú: 86 An Dương Vương, Phường 10, Tp Sóc Trăng, tỉnh Sóc Trăng.
+Chức vụ: Giám đốc công ty</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text23 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>172,14,12,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,13,Italic</Font>
+              <Guid>241dcecee0544ee982741e59110be799</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{hop_dong.ngay_soan_hd}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="16" type="CustomFormat" isKey="true">
+                <StringFormat>yyyy</StringFormat>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text22 Ref="17" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>160,14,6,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,13,Italic</Font>
+              <Guid>367c538682a444bca7950bbfce2e43e5</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{hop_dong.ngay_ky_hd}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="18" type="CustomFormat" isKey="true">
+                <StringFormat>MM</StringFormat>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text21 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>140,14,8,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,13,Italic</Font>
+              <Guid>4e8e4c7a06cf4e18a6550019148e97e8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{hop_dong.ngay_soan_hd}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="20" type="CustomFormat" isKey="true">
+                <StringFormat>dd</StringFormat>
+              </TextFormat>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text17 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>148,14,12,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,13,Italic</Font>
+              <Guid>fb15733b341c4f7e88f9fa782728ef9e</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>tháng</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>166,14,8,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,13,Italic</Font>
+              <Guid>6c742c911a42422a9e5136d74b598e8c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>năm</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text6 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>104,14,36,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,13,Italic</Font>
+              <Guid>113e13aebe314888a38e49f855f80340</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Tp Sóc Trăng, ngày</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text8 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.5,110.1,174,7.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold</Font>
+              <Guid>34507d4a0d54496d9e2b6c764768f2ff</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Thỏa thuận ký kết hợp đồng lao động và làm đúng những điều khoản sau đây:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text7 Ref="25" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,76,182,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Và một bên là Ông/Bà: {hop_dong.ten_nv}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text39 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,82,58.9,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>5d3c66d9c945445494d59bac0bae0397</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Sinh ngày: {hop_dong.ngay_sinh.ToString("dd/MM/yyyy")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text46 Ref="27" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>80.8,82,52.3,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>1d5b2e6bffe54c93aecdf4285c85311c</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Giới tính: {hop_dong.gioi_tinh}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text40 Ref="28" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,89,49.4,7.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>f274e7fee24040459c8d3b4530d64218</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Số CMND: {hop_dong.so_cmnd}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text40>
+            <Text41 Ref="29" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>54.5,89,56.8,7.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>b37e7dfca9454f31aaa20174734611c9</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Ngày cấp: {hop_dong.ngay_cap_cmnd.ToString("dd/MM/yyyy")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text42 Ref="30" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>114.3,89,70.4,7.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>503cda0e74c14afd807a1b1a6cb93f4f</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Nơi cấp: {hop_dong.noi_cap_cmnd}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text43 Ref="31" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,96.1,181.2,7.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>18aef9c87af1400eb96d73a07f7e6e37</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Nơi đăng ký HKTT: {hop_dong.ho_khau}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="32" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,103.2,181.1,7.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>34dc253c51fe4b2793df2b7c8c3ff5d4</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>Chỗ ở hiện nay: {hop_dong.dia_chi}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text12 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,120,112,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold</Font>
+              <Guid>711647472d5342e4b707c61be39a22f0</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>ĐIỀU I: CÔNG VIỆC VÀ ĐỊA ĐIỂM LÀM VIỆC</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="34" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8,134,176,26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>f7a2209ec8554b5e81b5fff10f54d63b</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>- Công việc phải làm: Khám bệnh, chữa bệnh theo phạm vi hoạt động chuyên môn được ghi trên chứng chỉ hành nghề số {hop_dong.so_cchn} của {hop_dong.noi_cap_cchn} ngày {hop_dong.ngay_cap_cchn.ToString("dd/MM/yyyy")} và theo sự phân công của Giám đốc Bệnh viện Đa khoa Hoàng Tuấn. Thực hiện các nhiệm vụ khác theo sự phân công của Ban Giám Đốc hoặc các tổ chức, cá nhân được ủy quyền.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text31 Ref="35" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,128,40,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold| Italic</Font>
+              <Guid>8e965a8002f74e339890958b4734370b</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>1/ Công việc:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text14 Ref="36" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,160,92,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold| Italic</Font>
+              <Guid>698b7c701a094e14bfcf0e1700c43909</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>2/ Địa điểm làm việc của người lao động:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text20 Ref="37" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8,168,176,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>b6935eccc611439e9520394a087f3ef0</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>- {hop_dong.dia_diem_lv}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text47 Ref="38" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,176,92,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold| Italic</Font>
+              <Guid>715ca7fc135a407a8eda1df73ddfb936</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>3/ Phương tiện đi lại làm việc:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+            <Text38 Ref="39" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8,184,176,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>8a38425a190d43659f0b84e60736c40c</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>- {hop_dong.phuong_tien}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text16 Ref="40" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8,200,176,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>ea636bcdee3b4ebc971f94be830420f1</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>- Loại hợp đồng lao động: {hop_dong.loai_hop_dong} kể từ ngày {hop_dong.ngay_hieu_luc_hd.ToString("dd/MM/yyyy")}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text15 Ref="41" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,192,92,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold</Font>
+              <Guid>b4d589700001469a8aa55c1b08d26844</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>ĐIỀU 2: THỜI HẠN CỦA HỢP ĐỒNG</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text25 Ref="42" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4,224,176,40</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>d3bb2f35f6dc45fda616d7ebb3a52134</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>- Trong ngày: {hop_dong.tg_ngay}.
+- Trong tuần: {hop_dong.tg_tuan}.
+- Do tính chất công việc, nhu cầu kinh doanh hay nhu cầu của tổ chức/bộ phận, Công ty có thể cho áp dụng thời gian làm việc linh hoạt. Những nhân viên được áp dụng thời gian làm việc linh hoạt có thể không tuân thủ lịch làm việc cố định bình thường mà làm theo ca kíp, nhưng vẫn phải đảm bảo đủ số giờ làm việc theo quy định.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text25>
+            <Text28 Ref="43" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,208,130,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold</Font>
+              <Guid>3a27b83ece5c4f33bf762d6e2bb822e9</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>ĐIỀU 3 : THỜI GIỜ LÀM VIỆC, THỜI GIỜ NGHỈ NGƠI</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text33 Ref="44" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,216,46,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold| Italic</Font>
+              <Guid>eb5cd72b801444c7aabe87bc801beda6</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>1/ Thời giờ làm việc:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>hop_dong</DataSourceName>
+          <Filters isList="true" count="1">
+            <value>hd_id,EqualTo,id,,Numeric</value>
+          </Filters>
+          <Name>DataBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>412caf7d61034131a2f1330e44e7f36a</Guid>
+      <Margins>10,10,10,10</Margins>
+      <Name>Page1</Name>
+      <PageHeight>297</PageHeight>
+      <PageWidth>210</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+    </Page1>
+    <Page2 Ref="45" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <ReportTitleBand2 Ref="46" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4,190,269.4</ClientRectangle>
+          <Components isList="true" count="15">
+            <Text91 Ref="47" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.1,30.7,179.4,16.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Italic</Font>
+              <Guid>2b8375306ef44d65994816c56ed97d17</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text91</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>a) Các khoản thu nhập phải đóng BHXH theo Quyết định số 12/2018/QĐ-HT về việc ban hành thang bảng lương năm 2018 của Công ty TNHH Hoàng Tuấn.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text91>
+            <Text26 Ref="48" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,0,44,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold| Italic</Font>
+              <Guid>c275aca568564e6b86dd2a4363b2590a</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>2/ Thời gian nghỉ:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text27 Ref="49" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,8,178,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>75180efd7c3a4e1aa35ecaa59c9eebbe</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>- {hop_dong.tg_nghi_ngoi}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text24 Ref="50" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,24,30,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold| Italic</Font>
+              <Guid>45bf959a3ace49feae1af149d7d03bba</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>1/ Quyền lợi:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text90 Ref="51" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.1,16,183.7,8.7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold</Font>
+              <Guid>2a93b2f51d464960bd35b546c4860412</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text90</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>ĐIỀU 4: QUYỀN LỢI VÀ NGHĨA VỤ CỦA NGƯỜI LAO ĐỘNG</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text90>
+            <Text92 Ref="52" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.1,46,179.4,27.5</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>02de6fc651b648edba7a4300882d4e39</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text92</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>- Mức lương chính: {hop_dong.luong_can_ban} đồng/tháng (Bậc lương x mức lương tối thiểu vùng hiện tại: 1.4 x 3.640.000 đồng)
+- Phụ cấp chức vụ: {hop_dong.pc_cong_viec}
+- Phụ cấp độc hại: {hop_dong.pc_doc_hai}  đồng/tháng ( Lương tối thiểu vùng x 5%)</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text92>
+            <Text29 Ref="53" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,74,180,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Italic</Font>
+              <Guid>f8b8ebbd8efd445789488f5598243053</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>b) Các khoản hỗ trợ:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="54" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6,80,180,72</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>ceb27542d3d349b5939324aa1983e38e</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>- Ăn trưa: {hop_dong.pc_an_trua} đồng/tháng
+- Điện thoại: {hop_dong.pc_dien_thoai} đồng/tháng
+- Xăng xe: {hop_dong.pc_xang_xe} đồng/tháng
+- Hỗ trợ chi phí đi lại: {hop_dong.chi_phi_di_lai} đồng/tháng
+- Tiền thưởng lễ, tết: {hop_dong.le_tet}
+- Hình thức trả lương: {hop_dong.hinh_thuc_tra_luong}
+- Thời gian trả lương: {hop_dong.thoi_gian_tra_luong}
+- Chế độ nâng lương: {hop_dong.che_do_nang_luong}
+- Bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp: {hop_dong.bhyt_bhxh}
+</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text94 Ref="55" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,158,178,20</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>98dfecd4d2a24f4a96ff4e047b86b986</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text94</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>- Hoàn thành những công việc đã cam kết trong hợp đồng
+- Nắm rõ và chấp hành nghiêm kỷ luật lao động, an toàn lao động, vệ sinh lao động, PCCC, văn hóa công ty, nội quy lao động và các chủ trương, chính sách Công ty.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text94>
+            <Text93 Ref="56" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,152,44,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold| Italic</Font>
+              <Guid>3b329257571b4b16a017b8bcae96be22</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text93</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>2/ Nghĩa vụ:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text93>
+            <Text95 Ref="57" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,180,180,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold</Font>
+              <Guid>4d07b6d654814c0ab60adbeb2020747c</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text95</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>ĐIỀU 5: QUYỀN VÀ NGHĨA VỤ CỦA NGƯỜI SỬ DỤNG LAO ĐỘNG</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text95>
+            <Text96 Ref="58" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,192,178,26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>6c90646544104668a1b4558222a5f95c</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text96</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>- Bảo đảm việc làm và thực hiện đầy đủ những điều đã cam kết trong hợp đồng lao động.
+- Thanh toán đầy đủ, đúng thời hạn các chế độ, quyền lợi cho người lao động theo khoản 1 điều 4 của hợp đồng lao động.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text96>
+            <Text32 Ref="59" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,186,28,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold| Italic</Font>
+              <Guid>6894bbda133f469488dd335eb5f3542a</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>1/ Nghĩa vụ:</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text98 Ref="60" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,226,178,28</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>2c3b68b13852451fb923783b781dae79</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text98</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>- Điều hành người lao động hoàn thành công việc theo hợp đồng (bao gồm: bố trí, điều chuyển, tạm ngừng việc và kỷ luật lao động theo quy định)
+- Tạm hoãn, chấm dứt hợp đồng lao động, kỷ luật người lao động theo quy định của pháp luật về lao động.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text98>
+            <Text97 Ref="61" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,218,38,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold| Italic</Font>
+              <Guid>6a2f87b93f344f958d896863d05fa664</Guid>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text97</Name>
+              <Page isRef="45" />
+              <Parent isRef="46" />
+              <Text>2/ Quyền hạn:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text97>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>b4c3092795dd45678ae88432131314c9</Guid>
+          <Name>ReportTitleBand2</Name>
+          <Page isRef="45" />
+          <Parent isRef="45" />
+        </ReportTitleBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>6ee11b800581423cad70712bcf08a111</Guid>
+      <Margins>10,10,10,10</Margins>
+      <Name>Page2</Name>
+      <PageHeight>297</PageHeight>
+      <PageWidth>210</PageWidth>
+      <Report isRef="0" />
+    </Page2>
+    <Page3 Ref="62" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <ReportTitleBand3 Ref="63" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4,190,175.2</ClientRectangle>
+          <Components isList="true" count="8">
+            <Text99 Ref="64" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.5,-0.5,116.9,7.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold</Font>
+              <Guid>3ed4a309aa3e4af38c741ca8a899b12e</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text99</Name>
+              <Page isRef="62" />
+              <Parent isRef="63" />
+              <Text>ĐIỀU 6: NHỮNG THỎA THUẬN KHÁC</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text99>
+            <Text100 Ref="65" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.5,6.6,177.5,65.9</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>8e13111c4ed9421fb156da5e9118f622</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text100</Name>
+              <Page isRef="62" />
+              <Parent isRef="63" />
+              <Text>- Đào tạo: Theo quy định của Công ty và yêu cầu công việc. Trong trường hợp CBNV được cử đi đào tạo thì nhân viên phải hoàn thành khoá học đúng thời hạn, phải cam kết sẽ phục vụ lâu dài cho Công ty sau khi kết thúc khoá học và được hưởng 100% mức lương tại thời điểm hưởng, các quyền lợi khác được hưởng như người đi làm. 
+- Nếu sau khi kết thúc khóa đào tạo mà nhân viên không tiếp tục hợp tác với Công ty thì nhân viên phải hoàn trả lại 100% phí đào tạo và các khoản chế độ đã được nhận trong thời gian đào tạo. Bồi thường những thiệt hại do ảnh hưởng đến kế hoạch kinh doanh của Công ty (Mức này do thỏa thuận).
+- Thực hiện sinh đẻ có kế hoạch theo quy chế đơn vị phải từ 2 năm công tác trở lên (đối với lao động nữ).</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text100>
+            <Text101 Ref="66" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.5,72.5,114.3,9</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold</Font>
+              <Guid>4088b227db284481973819d5fa015c9e</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text101</Name>
+              <Page isRef="62" />
+              <Parent isRef="63" />
+              <Text>ĐIỀU 7: ĐIỀU KHOẢN THI HÀNH</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text101>
+            <Text102 Ref="67" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.5,81.5,177.5,48.7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>b34c672165ca48a1a693b6d7366e5bb1</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <LineSpacing>1.15</LineSpacing>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text102</Name>
+              <Page isRef="62" />
+              <Parent isRef="63" />
+              <Text>- Những vấn đề về lao động không ghi trong hợp đồng lao động này thì áp dụng theo nội quy lao động, quy chế lương thưởng, thỏa ước lao động tập thể của người sử dụng lao động và người lao động.
+- Hợp đồng lao động này gồm 3 (ba) trang và lập thành 2 (hai) bản có giá trị như nhau, mỗi bên giữ 01 (một) bản và có hiệu lực từ ngày {hop_dong.ngay_hieu_luc_hd.ToString("dd/MM/yyyy")}.
+- Hợp đồng này được làm tại trụ sở của chi nhánh Công ty TNHH Hoàng Tuấn – Bệnh viện Đa khoa Hoàng Tuấn vào ngày {hop_dong.ngay_soan_hd.ToString("dd/MM/yyyy")}.</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text102>
+            <Text34 Ref="68" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,134,44,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold</Font>
+              <Guid>d697e194f293420e9e29ee81d7fa1fb3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="62" />
+              <Parent isRef="63" />
+              <Text>Người lao động</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text35 Ref="69" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>124,134,56,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14,Bold</Font>
+              <Guid>be43d4fce3294c01bb848edc4933e18e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="62" />
+              <Parent isRef="63" />
+              <Text>Người sử dụng lao động</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text36 Ref="70" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,140,44,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>f87d827f72e3410ba43dc3f416efeedb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="62" />
+              <Parent isRef="63" />
+              <Text>(Ký và ghi rõ họ tên)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text37 Ref="71" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>124,140,56,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14</Font>
+              <Guid>f6b6377626d34dba90f318195e972fc2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="62" />
+              <Parent isRef="63" />
+              <Text>(Ký tên, đóng dấu)</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>4406b18f3dc74d6f93e3a4f2c722dbf0</Guid>
+          <Name>ReportTitleBand3</Name>
+          <Page isRef="62" />
+          <Parent isRef="62" />
+        </ReportTitleBand3>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>8c0eb50864e649169136bce2d587ab18</Guid>
+      <Margins>10,10,10,10</Margins>
+      <Name>Page3</Name>
+      <PageHeight>297</PageHeight>
+      <PageWidth>210</PageWidth>
+      <Report isRef="0" />
+    </Page3>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>3/25/2024 7:24:49 AM</ReportChanged>
+  <ReportCreated>11/28/2023 3:05:39 PM</ReportCreated>
+  <ReportFile>C:\xampp\htdocs\quanlynhansu\report\reports\hd.mrt</ReportFile>
+  <ReportGuid>b4fef33178a445cfbbb5fe10266efc3b</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Millimeters</ReportUnit>
+  <ReportVersion>2019.3.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+			
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+		
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

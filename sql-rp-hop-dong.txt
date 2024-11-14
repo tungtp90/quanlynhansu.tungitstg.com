@@ -1,0 +1,31 @@
+SELECT nv.id AS id, nv.ma_nv, nv.ten_nv, nv.ngay_sinh, (CASE nv.gioi_tinh
+    WHEN 1 THEN 'Nam' ELSE 'Nữ'
+  END) AS gioi_tinh, dt.ten_dan_toc, nv.so_cchn, nv.ngay_cap_cchn,
+  nv.noi_cap_cchn, (CASE nv.trang_thai_lv WHEN 1 THEN 'Đang làm việc'
+    ELSE 'Đã nghỉ việc'
+  END) AS trang_thai_lv, nv.pham_vi_hoat_dong_cm, nv.chung_chi_khac,
+  nv.toantg_bantg, td.ten_trinh_do, cm.ten_chuyen_mon, cv.ten_chuc_vu,
+  nv.ngay_bat_dau_lam_viec, nv.ngay_thu_viec, nv.ngay_tham_gia_bhxh,
+  nv.nhiem_vu, nv.luong_co_ban, nv.thoi_han_nang_luong, nv.huong_che_do_bhxh,
+  nv.hoc_tap, nv.ky_luat, (CASE khd.loai_hop_dong
+    WHEN 1 THEN 'Hợp đồng không xác định thời hạn'
+    WHEN 2 THEN 'Hợp đồng có xác định thời hạn' WHEN 3 THEN 'Hợp đồng thử việc'
+  END) AS loai_hop_dong, nv.thoi_gian_nghi_viec, nv.ly_do_nghi_viec,
+  pb.ten_phong_ban, dv.ten_don_vi, bc.ten_bang_cap, lnv.ten_loai_nv,
+  qt.ten_quoc_tich, tg.ten_ton_giao, nv.so_cmnd, nv.ngay_cap_cmnd,
+  nv.noi_cap_cmnd, nv.dia_chi, nv.so_dien_thoai, nv.ghi_chu_nv, khd.ma_hd,
+  khd.nhan_vien_id, khd.loai_hop_dong, khd.ngay_soan_hd, khd.ngay_ky_hd,
+  khd.ngay_hieu_luc_hd, khd.dia_diem_ky_hd, khd.noi_dung_hd, khd.ghi_chu_hd,
+  khd.dia_diem_lv, khd.phuong_tien, khd.tg_ngay, khd.tg_tuan, khd.tg_nghi_ngoi,
+  khd.luong_can_ban, khd.pc_cong_viec, khd.pc_doc_hai, khd.pc_an_trua,
+  khd.pc_dien_thoai, khd.pc_xang_xe, khd.chi_phi_di_lai, khd.le_tet,
+  khd.hinh_thuc_tra_luong, khd.thoi_gian_tra_luong, khd.che_do_nang_luong,
+  khd.bhyt_bhxh, khd.nguoi_tao, khd.ngay_tao, khd.nguoi_sua, khd.ngay_sua
+FROM nhanvien nv, quoc_tich qt, dan_toc dt, ton_giao tg, loai_nv lnv,
+    trinh_do td, chuyen_mon cm, bang_cap bc, phong_ban pb, chuc_vu cv,
+    tinh_trang_hon_nhan hn, don_vi dv, ky_hop_dong khd
+WHERE nv.id = khd.nhan_vien_id AND nv.quoc_tich_id = qt.id AND
+  nv.dan_toc_id = dt.id AND nv.ton_giao_id = tg.id AND nv.loai_nv_id = lnv.id
+  AND nv.trinh_do_id = td.id AND nv.chuyen_mon_id = cm.id AND
+  nv.bang_cap_id = bc.id AND nv.phong_ban_id = pb.id AND nv.chuc_vu_id = cv.id
+  AND nv.hon_nhan_id = hn.id AND nv.don_vi_id = dv.id
