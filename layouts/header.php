@@ -30,22 +30,8 @@ $row_acc = mysqli_fetch_array($result_acc);
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <style>
-    /* Tạo hiệu ứng nhấp nháy */
-    .blink {
-      animation: blink-animation 1s steps(5, start) infinite;
-      -webkit-animation: blink-animation 1s steps(5, start) infinite;
-    }
-
-    @keyframes blink-animation {
-      to {
-        visibility: hidden;
-      }
-    }
-
-    @-webkit-keyframes blink-animation {
-      to {
-        visibility: hidden;
-      }
+    .invisible {
+      visibility: hidden;
     }
   </style>
 </head>

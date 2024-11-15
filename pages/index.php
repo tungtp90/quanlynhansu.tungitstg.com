@@ -359,3 +359,10 @@ if (isset($_SESSION['username']) && isset($_SESSION['level'])) {
 }
 
 ?>
+<script>
+	$(document).ready(function() {
+		setInterval(function() {
+			$('.blink').toggleClass('invisible');
+		}, 500); // thời gian nhấp nháy, ở đây là 500ms
+	});
+</script>
