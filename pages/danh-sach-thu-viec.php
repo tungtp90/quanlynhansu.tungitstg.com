@@ -199,7 +199,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['level']))
                           }
                           else
                           {
-                            echo '<td><span class="badge bg-red"> Đã hết thời gian thử việc </span></td>';
+                            echo '<td><span class="badge bg-red blink"> Đã hết thời gian thử việc </span></td>';
                           }
                         ?>
                         </td>

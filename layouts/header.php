@@ -1,20 +1,21 @@
-<?php 
-  
-  // connect database
-  require_once('../config.php');
-  //require_once ('../report/stimulsoft/helper.php');
+<?php
 
-  // get info acount share to all view
-  $email = $_SESSION['username'];
-  $acc = "SELECT * FROM tai_khoan WHERE email = '$email'";
-  $result_acc = mysqli_query($conn, $acc);
-  $row_acc = mysqli_fetch_array($result_acc);
+// connect database
+require_once('../config.php');
+//require_once ('../report/stimulsoft/helper.php');
+
+// get info acount share to all view
+$email = $_SESSION['username'];
+$acc = "SELECT * FROM tai_khoan WHERE email = '$email'";
+$result_acc = mysqli_query($conn, $acc);
+$row_acc = mysqli_fetch_array($result_acc);
 
 ?>
 <!DOCTYPE html>
 <html>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +29,25 @@
   <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <style>
+    /* Tạo hiệu ứng nhấp nháy */
+    .blink {
+      animation: blink-animation 1s steps(5, start) infinite;
+      -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    }
+
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    @-webkit-keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+  </style>
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
-   
